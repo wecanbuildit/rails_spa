@@ -11,6 +11,7 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'bower-rails'
+gem "foreman"
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
@@ -35,6 +36,10 @@ group :development, :test do
   # Put the two below in group :test do end if they cause an issue
   gem 'database_cleaner'
   gem 'launchy'
+end
+group :production, :staging do
+  gem 'rails_stdout_logging'
+  gem 'rails_serve_static_assets'
 end
 group :production do
   gem 'pg'
