@@ -10,15 +10,17 @@ module RailsSpa
   class Application < Rails::Application
 
     config.generators do |g|
-      g.test_framework :rspec,
-        fixtures: true,
-        view_specs: false,
-        helper_specs: false,
-        routing_specs: false,
-        controller_specs: false,
-        request_specs: false
-      g.fixture_replacement :factory_girl, dir: "spec/factories"
+        g.test_framework :rspec,
+            fixtures: true,
+            view_specs: false,
+            helper_specs: false,
+            routing_specs: false,
+            controller_specs: false,
+            request_specs: false
+        g.fixture_replacement :factory_girl, dir: "spec/factories"
     end
+
+    config.assets.paths << Rails.root.join("vendor","assets","bower_components")
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
