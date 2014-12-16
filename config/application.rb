@@ -8,7 +8,8 @@ Bundler.require(*Rails.groups)
 
 module RailsSpa
   class Application < Rails::Application
-
+    config.assets.paths << Rails.root.join("vendor","assets","bower_components")
+    config.assets.precompile << %r(.*.(?:eot|svg|ttf|woff)$)
     config.generators do |g|
         g.test_framework :rspec,
             fixtures: true,
@@ -19,8 +20,6 @@ module RailsSpa
             request_specs: false
         g.fixture_replacement :factory_girl, dir: "spec/factories"
     end
-
-    config.assets.paths << Rails.root.join("vendor","assets","bower_components")
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
