@@ -12,6 +12,7 @@ gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'bower-rails'
 gem "foreman"
+gem 'angular-rails-templates'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
