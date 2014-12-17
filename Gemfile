@@ -38,8 +38,8 @@ group :development, :test do
   gem 'launchy'
 end
 group :production, :staging do
-  gem 'rails_stdout_logging'
-  gem 'rails_serve_static_assets'
+  #gem 'rails_stdout_logging'
+  #gem 'rails_serve_static_assets'
 end
 group :production do
   gem 'pg'

@@ -263,8 +263,6 @@ DEPENDENCIES
   rails (= 4.1.8)
   rails_12factor
   rails_layout
-  rails_serve_static_assets
-  rails_stdout_logging
   rb-fchange
   rb-fsevent
   rb-inotify
